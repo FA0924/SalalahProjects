@@ -8,14 +8,13 @@ namespace ClassWorkProjects.Models.Salalah_Delivery_Express
 {
     public class Driver
     {
-        public Driver(int id, string CustomerName, string CustomerNumber, string Address)
+        public Driver(int id, string DriverrName, string DriverrNumber)
         {
-
             this.id = id;
             this.DriverrName = DriverrName;
             this.DriverrNumber = DriverrNumber;
-
         }
+
         public int id { get; set; }
         public string DriverrName { get; set; }
         public string DriverrNumber { get; set; }
@@ -23,7 +22,7 @@ namespace ClassWorkProjects.Models.Salalah_Delivery_Express
 
         public void DisplayDriverrInfo()
         {
-            Console.WriteLine($"customer ID: {id}");
+            Console.WriteLine($"driver ID: {id}");
             Console.WriteLine($"name: {DriverrName}");
             Console.WriteLine($"phone: {DriverrNumber}");
         }

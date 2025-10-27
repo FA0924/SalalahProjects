@@ -27,9 +27,35 @@ namespace ClassWorkProjects.Models.Salalah_Sports_League
         public string winner { get; set; }
 
         private void DetermineWinner()
-        { }
+        {
+            if (score1 > score2)
+            {
+                winner = team1.name;
+                team1.UpdateStats("win");
+                team2.UpdateStats("loss");
+            }
+            else if (score2 > score1)
+            {
+                winner = team2.name;
+                team2.UpdateStats("win");
+                team1.UpdateStats("loss");
+            }
+            else
+            {
+                winner = "Draw";
+                team1.UpdateStats("draw");
+                team2.UpdateStats("draw");
+            }
+        }
 
         public void DisplayMatchInfo()
-        { }
+        {
+            Console.WriteLine("----------------------------");
+            Console.WriteLine($"match #{matchid}");
+            Console.WriteLine($"{team1.name} vs {team2.name}");
+            Console.WriteLine($"score: {score1} - {score2}");
+            Console.WriteLine($"result: {winner}");
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+        }
     }
 }

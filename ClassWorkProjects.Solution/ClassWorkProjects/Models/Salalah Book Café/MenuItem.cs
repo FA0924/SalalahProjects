@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassWorkProjects.Models.Salalah_Book_Café
 {
-    internal class MenuItem
+    public class MenuItem
     {
         public MenuItem(int id, string name, decimal price)
         {
@@ -25,4 +25,3 @@ namespace ClassWorkProjects.Models.Salalah_Book_Café
         }
     }
 }
-

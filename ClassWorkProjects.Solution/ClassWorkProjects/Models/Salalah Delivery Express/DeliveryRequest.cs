@@ -8,20 +8,18 @@ namespace ClassWorkProjects.Models.Salalah_Delivery_Express
 {
     public class DeliveryRequest
     {
-        
-            public DeliveryRequest(int deliveryid, Customer customer, Driver driver)
-            {
-                this.deliveryid = deliveryid;
-                this.customer = customer;
-                this.driver = driver;
-                this.status = "Pending";
-            }
+        public DeliveryRequest(int deliveryid, Customer customer, Driver driver)
+        {
+            this.deliveryid = deliveryid;
+            this.customer = customer;
+            this.driver = driver;
+            this.status = "Pending";
+        }
 
-            public int deliveryid { get; set; }
-            public Customer customer { get; set; }
-            public Driver driver { get; set; }
-            public string status { get; set; }
-
+        public int deliveryid { get; set; }
+        public Customer customer { get; set; }
+        public Driver driver { get; set; }
+        public string status { get; set; }
 
 
         public void UpdateStatus(string newstatus)
@@ -48,7 +46,5 @@ namespace ClassWorkProjects.Models.Salalah_Delivery_Express
             driver.DisplayDriverrInfo();
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         }
-
-
     }
 }

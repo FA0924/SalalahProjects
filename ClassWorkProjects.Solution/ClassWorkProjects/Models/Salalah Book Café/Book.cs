@@ -7,19 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace ClassWorkProjects.Models.Salalah_Delivery_Express
+namespace ClassWorkProjects.Models.Salalah_Book_Café
 {
     public class Book
     {
         public Book(int bookid, string title, string author)
         {
-
             this.Bookid = bookid;
             this.Title = title;
             this.Author = author;
             this.isavailable = true;
-
         }
+
         public int Bookid { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
@@ -29,7 +28,7 @@ namespace ClassWorkProjects.Models.Salalah_Delivery_Express
         public void DisplayBookInfo()
         {
             string status = isavailable ? "[available]" : "[borrowed]";
-            Console.WriteLine($"{id}. {Title} by {Author} {status}");
+            Console.WriteLine($"{Bookid}. {Title} by {Author} {status}");
         }
     }
 }

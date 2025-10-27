@@ -17,7 +17,7 @@ namespace ClassWorkProjects.Models.Dhofar_Car_Rental
         }
 
         public int CRid { get; set; }
-        public string   CRname { get; set; }
+        public string CRname { get; set; }
         public string CRphone { get; set; }
         public string licensenumber { get; set; }
 
